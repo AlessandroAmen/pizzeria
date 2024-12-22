@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: rgba(127, 255, 212, 0.336);
+  }
+  
+  .navbar {
+    background-color: #2790aa94;
+    padding: 10px 200px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .navbar-container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+  }
+  
+  .home-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  #btnCerca {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 35px;
+    transition: background-color 0.3s ease;
+  }
+
+  #formRicerca {
+   display:none;
+   background-color: blue;
+    }
+
+  .search-button:hover {
+    background-color: rgb(46, 141, 78);
+  }
+
+ div.container {
+ justify-content: center;
+ text-align: center;
+ display: flex;
+ width: 1200px;
+ margin: auto;
+ gap: 50px;
+  } 
+
+img {
+    width: 180px;
+    width: 180px;
+   }
+
+.card{
+   margin-left: 40px;
+}
+
+h1, h2 , h3, h4 , h5, h6 {
+text-align: center;
+color: orange;
+}
+.debug {
+  border: 1px solid red;
+}
+p {
+  text-align: center;
+}
+
+/* CSS per index pizza */
+div.containerpizza {
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  width: 1200px;
+  margin: auto;
+  gap: 50px;
+   } 
