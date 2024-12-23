@@ -49,9 +49,10 @@
    display:none;
    background-color: blue;
     }
-  input.form {
-
+  .stocazzo {
+color: brown;
   }
+  
   .search-button:hover {
     background-color: rgb(46, 141, 78);
   }
