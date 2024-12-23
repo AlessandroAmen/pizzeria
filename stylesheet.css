@@ -16,7 +16,8 @@
     padding: 10px 200px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
-  
+
+ 
   .navbar-container {
     max-width: 100%;
     margin: 0 auto;
@@ -48,18 +49,20 @@
    display:none;
    background-color: blue;
     }
+  input.form {
 
+  }
   .search-button:hover {
     background-color: rgb(46, 141, 78);
   }
 
- div.container {
- justify-content: center;
- text-align: center;
- display: flex;
- width: 1200px;
- margin: auto;
- gap: 50px;
+   div.container {
+   justify-content: center;
+   text-align: center;
+   display: flex;
+   width: 1200px;
+   margin: auto;
+   gap: 50px;
   } 
 
 img {
@@ -83,11 +86,37 @@ p {
 }
 
 /* CSS per index pizza */
-div.containerpizza {
-  justify-content: center;
-  text-align: center;
-  display: flex;
-  width: 1200px;
-  margin: auto;
-  gap: 50px;
+  div.containerpizza {
+   display: flex;
+   justify-content: center;
+
    } 
+
+   .cardpizza {
+    margin-top: 10%;
+    width: 40%;
+    padding-left: 10%;
+   }
+   
+.containeringredienti {
+ display: flex;
+ justify-content: left;
+ margin-top: 10%;
+ width: 650px;
+ flex-direction: row;
+ flex-wrap: wrap;
+    }
+
+
+.pizzasingolaimg {
+    width: 400px;
+    height: 250px;
+   }
+
+.cardingredienti {
+ margin-right: 30px;
+ margin-bottom: 30px;
+  }
+
+
+   
