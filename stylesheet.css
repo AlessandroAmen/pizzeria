@@ -2,69 +2,301 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
 
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
-    background-color: rgba(127, 255, 212, 0.336);
-  }
-  
-  .navbar {
-    background-color: #2790aa94;
-    padding: 10px 200px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
+    background-color: #f8f9fa;
+    color: #1a1a1a;
+}
 
- 
-  .navbar-container {
-    max-width: 100%;
+.navbar {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
-  }
-  
-  .home-link {
+}
+
+.home-link {
     text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 18px;
-  }
-  
-  #btnCerca {
-    background-color: #4CAF50;
+    color: #1a1a1a;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.home-link:hover {
+    color: #2d9cdb;
+}
+
+#btnCerca {
+    background-color: #2d9cdb;
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
     cursor: pointer;
-    border-radius: 35px;
-    transition: background-color 0.3s ease;
-  }
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
 
-  #formRicerca {
-   display:none;
-   background-color: blue;
-    }
-  .stocazzo {
-color: brown;
-  }
-  
-  .search-button:hover {
-    background-color: rgb(46, 141, 78);
-  }
+#btnCerca:hover {
+    background-color: #2486bc;
+    transform: scale(1.02);
+}
 
-   div.container {
-   justify-content: center;
-   text-align: center;
-   display: flex;
-   width: 1200px;
-   margin: auto;
-   gap: 50px;
-  } 
+#formRicerca {
+    display: none;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    padding: 0.8rem 1.2rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    width: 250px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #2d9cdb;
+    box-shadow: 0 0 0 3px rgba(45, 156, 219, 0.1);
+}
+
+div.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    width: 280px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card .testo {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.card .prezzo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d9cdb;
+    margin-bottom: 1rem;
+}
+
+.card button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 12px;
+    background: #2d9cdb;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background: #2486bc;
+    transform: scale(1.02);
+}
+
+/* Carrello */
+.cart-icon {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #2d9cdb;
+    color: white;
+    padding: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(45, 156, 219, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #e74c3c;
+    color: white;
+    border-radius: 50%;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.cart-panel {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background: white;
+    padding: 2rem;
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 999;
+}
+
+.cart-panel.active {
+    right: 0;
+}
+
+.cart-items {
+    margin-top: 2rem;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-total {
+    margin-top: 2rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: right;
+    color: #1a1a1a;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #2d9cdb;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background: #2486bc;
+    transform: scale(1.02);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    color: #1a1a1a;
+    margin: 1.5rem 0;
+    font-weight: 600;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* CSS per index pizza */
+div.containerpizza {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.cardpizza {
+    margin-top: 10%;
+    width: 40%;
+    padding: 20px;
+}
+
+.containeringredienti {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10%;
+    width: 100%;
+    max-width: 650px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pizzasingolaimg {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.cardingredienti {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 10px;
+}
+
+.debug {
+  border: 1px solid red;
+}
+p {
+  text-align: center;
+}
 
 img {
     width: 180px;
@@ -79,45 +311,8 @@ h1, h2 , h3, h4 , h5, h6 {
 text-align: center;
 color: orange;
 }
-.debug {
-  border: 1px solid red;
-}
-p {
-  text-align: center;
-}
 
-/* CSS per index pizza */
-  div.containerpizza {
-   display: flex;
-   justify-content: center;
-
-   } 
-
-   .cardpizza {
-    margin-top: 10%;
-    width: 40%;
-    padding-left: 10%;
-   }
-   
-.containeringredienti {
- display: flex;
- justify-content: left;
- margin-top: 10%;
- width: 650px;
- flex-direction: row;
- flex-wrap: wrap;
-    }
-
-
-.pizzasingolaimg {
-    width: 400px;
-    height: 250px;
-   }
-
-.cardingredienti {
- margin-right: 30px;
- margin-bottom: 30px;
+.search-button:hover {
+    background-color: rgb(46, 141, 78);
   }
-
-
-   
+  
